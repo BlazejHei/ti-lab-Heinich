@@ -44,6 +44,17 @@ body {
 .menu a:hover{
     color: #f97316;
 }
+.menu-toggle{
+    display: none;
+    background-color: #f97316;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
 main{
     max-width: 1100px;
     margin: 0 auto;
@@ -164,3 +175,24 @@ footer a:hover{
     color: #fb923c;
     text-decoration: underline;
 }
+@media (max-width: 600px){
+    .menu-toggle{
+        display: block;
+    }
+    
+    .menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    .menu.menu--open{
+      display: flex;
+    }
+    
+    .site-header{
+      flex-wrap: wrap;
+    }
+  }

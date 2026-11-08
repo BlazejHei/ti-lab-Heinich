@@ -1,20 +1,71 @@
-body{
-    background-color: gainsboro;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #f8fafc;
 }
 .site-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 32px;
+    background-color: #0f172a;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+.logo{
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #f97316;
+    text-transform: uppercase;
 }
 .menu{
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 .menu a{
     text-decoration: none;
+    color: #e2e8f0;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: color 0.25s ease;
 }
 .menu a:hover{
-    color: grey;
+    color: #f97316;
+}
+main{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+section{
+    margin-bottom: 64px;
+}
+h2{
+    font-size: 30px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 28px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #f97316;
+    display: inline-block;
+}
+h3{
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
 }
 .cards{
     display: flex;
@@ -22,23 +73,94 @@ body{
     gap: 24px;
 }
 .card{
-    padding-left: 2%;
-    background-color: #4827cc;
     flex: 1 1 260px;
-    border: solid black;
-    border-radius: 5%;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+.card p{
+    margin-bottom: 8px;
+    color: #475569;
+}
+.card .card__price{
+    margin-top: auto;
+    padding-top: 12px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #f97316;
 }
 .card--highlight{
-    border: solid red;
+    border: 2px solid #f97316;
+    background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%);
 }
-.badge{
-    color: red;
-    text-decoration: underline;
+.card .badge{
+    display: inline-block;
+    background-color: #f97316;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    border: none;
+}
+.price-table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.price-table th{
+    background-color: #0f172a;
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.price-table td{
+    padding: 14px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+}
+.price-table tbody tr:hover{
+    background-color: #fff7ed;
 }
 .num{
     text-align: right;
-    font-weight: bold;
+    font-weight: 600;
+    color: #0f172a;
+}
+footer{
+    background-color: #0f172a;
+    color: #cbd5e1;
+    padding: 40px 24px;
+    text-align: center;
+    font-size: 15px;
 }
 footer a{
-    color: black;
+    color: #f97316;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+footer a:hover{
+    color: #fb923c;
+    text-decoration: underline;
 }
